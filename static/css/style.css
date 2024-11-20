@@ -1,77 +1,313 @@
+/* dm-serif-display-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/dm-serif-display-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* dm-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/dm-sans-v15-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+:root {
+    --background: #ffffcc;
+    --foreground: #111111;
+    --links: #2980dd;
+    --footer: #2b2b2b;
+}
+
+html {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
 body {
-    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.title {
-    padding-top: 150px;
-    padding-bottom: 150px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-
-    background-image: url('images/typing.jpg');
-    background-size: cover;
-    height: 50%;
-    border-radius: 100px;
+/* Navbar CSS */
+#navbar {
+    width: 100%;
+    border-bottom: 1px solid var(--foreground);
     
-    
-    color: cornsilk;
-}
-.buttons {
-    display: inline-flex;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    align-items: center;
+    height: 4rem;
+    padding: 0 1rem;
 }
 
-.socials{
-    background-repeat: no-repeat;
-    background-color: #ffffff;
-    border-radius: 10px;
-    color: #00000000;
-    cursor: pointer;
-    height: 54px;
-    padding-bottom: 2px;
-    width: 54px;
-    margin: 10px;
-}
-#linkedin {
-    background-image: url("images/LinkedIn_icon.png");
-    background-size: 55px;
-    background-origin: inherit;
-}
-#github {
-    background-image: url("images/GitHub-Mark.png");
-    background-size: 50px;
+.navlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    list-style-type: none;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    flex-grow: 2;
 }
 
-.topnav {
-    background-color: green;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
+.nav-item {
+    padding: 0 20px;
+    font-size: 1.3rem;
+    flex-grow: 1;
 
-.topnav a {
-    float: left;
-    color: white;
     text-align: center;
-    padding: 14px 16px;
+
+    font-size: 1.5rem;
+    font-family: "DM Serif Display", serif;
+    letter-spacing: 0.1rem;
+}
+
+.nav-edge {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-grow: 0.5;
+}
+
+.nav-divider {
+    height: 100%;
+    width: 2px;
+    background-color: var(--foreground);
+}
+
+.nav-item a {
     text-decoration: none;
-    font-size: 17px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--foreground);
 }
 
-.topnav a:hover {
-    background-color: forestgreen;
-    color: black;
+.nav-item a:hover {
+    color: var(--links);
+    transition: ease-in-out 0.2s;
 }
 
-.topnav a.active {
-    background-color: black;
-    color: white;
+#nav-name {
+    font-family: "DM Serif Display", serif;
 }
 
-h1 {
+/* Main CSS */
+#main-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    border: var(--foreground) 1px solid;
+}
+
+#main-content {
+    font-family: "DM Serif Display", serif;
+    display: flex;
+    flex-wrap: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+h2 {
     font-size: 100px;
+    margin: 0;
 }
 
-li {
-    display: inline;
+p {
+    font-size: 25px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    transition: ease-in-out 0.2s;
+}
+
+#main-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/* Skills CSS */
+#skills-grid {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    border: var(--foreground) 1px solid;
+}
+
+#skills-content {
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+}
+
+/* About CSS */
+#about-section {
+    font-family: "DM Serif Display", serif;
+    margin: 100px 200px;
+}
+
+/* Footer CSS */
+footer {
+    width: 100%;
+    height: 12rem;
+    padding: 0;
+    margin: 0;
+    background-color: var(--footer);
+    color: var(--background);
+    font-family: "DM Serif Display", serif;
+    display: flex;
+    align-items: center;
+}
+.footer-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 100px;
+}
+  
+.footer-item {
+    display: flex;
+    flex-direction: column;
+}
+.footer-item-left {
+    align-items: flex-start;
+}
+.footer-item-right {
+    align-items: flex-end;
+}
+
+footer p {
+    font-size: 1.3rem;
+}
+
+footer img {
+    filter: invert(1);
+}
+
+/* Contact Page CSS */
+#contact-content {
+    font-family: "DM Serif Display", serif;
+    width: 90%;
+    padding: 5% o 5% 10%;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 25px;
+    padding-top: 5%;
+}
+
+#contact-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 20px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+textarea {
+    font-family: "DM Serif Display", serif;
+    font-size: 20px;
+    height: 2.5rem;
+}
+
+textarea {
+    height: 300px;
+}
+
+#contact-form input[type="submit"] {
+    font-family: "DM Serif Display", serif;
+    font-size: 18px;
+    width: 30%;
+    padding: 10px 20px;
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
+#contact-form #firstname-lastname {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#contact-form #firstname-lastname div {
+    width: 40%;
+}
+
+/* Project Page CSS */
+#project-section {
+    font-family: "DM Serif Display", serif;
+    border-top: var(--foreground) 1px solid;
+    padding: 100px 200px;
+}
+
+#project-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+    padding-top: 50px;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    row-gap: 20px;
+    height: 150px;
+    width: 550px;
+    border: var(--foreground) 1px solid;
+    column-gap: 10px;
+}
+
+.project-title {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+}
+
+.project-image {
+    width: 30%;
+}
+
+.project-github-button {
+    color: var(--background);
+    background-color: var(--footer);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    margin-top: 50px;
 }
