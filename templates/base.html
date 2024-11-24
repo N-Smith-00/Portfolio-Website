@@ -13,40 +13,63 @@
                 <p class="nav-item" id="nav-name"><a href="/">Nicholas Smith</a></p>
                 <p class="nav-divider"></p>
             </div>
+            <ul class='navlist'>
+                <li class='nav-item'><a href="/skills-section">Skills</a></li>
+                <li class='nav-item'><a href="/about-section">About</a></li>
+                <li class='nav-item'><a href="/project-section">Projects</a></li>
+            </ul>
+            <div class="nav-edge">
+                <p class='nav-divider'></p>
+                <p class='nav-item'><a href="/contact">Contact</a></p>
+            </div>
         </nav>
 
         {% block content %}{% endblock %}
 
         <footer>
             <div class="footer-container">
-                <p>Computer Science Student</p>
-                <div id="footer-buttons">
-                    <a 
-                        href="https://www.linkedin.com/in/n-smith00/"
-                        class="footer-button"
-                        target="_blank"
-                    >
-                        <img 
-                            src="/static/images/linkedin_icon.png" 
-                            alt="LinkedIn"
-                            class="footer-icon"
-                        />
-                    </a>
-                    <a 
-                        href="https://github.com/N-Smith-00"
-                        class="footer-button"
-                        target="_blank"
-                    >
-                        <img 
-                            src="/static/images/github_icon.png" 
-                            alt="GitHub"
-                            class="footer-icon"
-                        />
-                    </a>
+                <div class='footer-item footer-item-left'>
+                    <p>Computer Science Student</p>
+                    <div id="footer-buttons">
+                        <a 
+                            href="https://www.linkedin.com/in/n-smith00/"
+                            class="footer-button"
+                            target="_blank"
+                        >
+                            <img 
+                                src="/static/images/linkedin_icon.png" 
+                                alt="LinkedIn"
+                                class="footer-icon"
+                            />
+                        </a>
+                        <a 
+                            href="https://github.com/N-Smith-00"
+                            class="footer-button"
+                            target="_blank"
+                        >
+                            <img 
+                                src="/static/images/github_icon.png" 
+                                alt="GitHub"
+                                class="footer-icon"
+                            />
+                        </a>
+                        <a 
+                            href="mailto:nicholas.smith@torontomu.ca"
+                            class="footer-button"
+                            target="_blank"
+                        >
+                            <img 
+                                src="/static/images/email_icon.png" 
+                                alt="Email"
+                                class="footer-icon"
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-item footer-item-right">
+                    <h3>Nicholas Smith</h3>
                 </div>
             </div>
-            <div class="footer-item footer-item-right">
-                <h2>Nicholas Smith</h2>
         </footer>
     </body>
 </html>
