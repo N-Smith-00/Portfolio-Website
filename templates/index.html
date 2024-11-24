@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% block title %}Nicholas Smith - Portfolio{% endblock %} {% 
+block content %}
+
+<div id='main-section'>
+    <section id='main-grid'>
+        <img
+            src='/static/images/placeholder_image.jpg'
+            alt='Profile Picture'
+            class='image'
+        />
+        <div id='main-content'>
+            <h2>Nicholas Smith</h2>
+            <p> Computer Science Student </p>
+            <div id='main-buttons'>
+                <a href='https://www.linkedin.com/in/n-smith00/'
+                    class='main-button'
+                    target='_blank'>
+                    <img
+                        src='/static/images/linkedin_icon.png'
+                        alt='LinkedIn'
+                        class='icon'
+                    />
+                </a>
+                <a href='https://github.com/N-Smith-00'
+                    class='main-button'
+                    target='_blank'>
+                    <img
+                        src='/static/images/github_icon.png'
+                        alt='GitHub'
+                        class='icon'
+                    />
+                </a>
+                <a href='mailto:nicholas.smith@torontomu.ca'
+                    class='main-button'
+                    target='_blank'>
+                    <img
+                        src='/static/images/email_icon.png'
+                        alt='Email'
+                        class='icon'
+                    />
+                </a>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id='skills-section'>
+    <section id='skills-grid'>
+        <div id='skills-content'>
+            <img src='/static/images/python_icon.png' alt='Python Icon' />
+            <img src='/static/images/java_icon.png' alt='Java Icon' />
+            <img src='/static/images/html_icon.png' alt='HTML Icon' />
+            <img src='/static/images/css_icon.png' alt='CSS Icon' />
+        </div>
+        <img src='/static/images/placeholder_image.jpg' alt='placeholder' />
+    </section>
+</div>
+
+<div id='about-section'>
+    <section>
+        <h2>About Me</h2>
+        <p> I am a second year computer science student at Toronto Metropolitan University. In my spare time, I like to play sports and work out. I love learning about new technologies and how they can be implemented. </p>
+    </section>
+</div>
+
+<div id="project-section">
+    <section>
+      <h2>PROJECTS</h2>
+  
+      <div id="project-grid">
+        {% for project in projects %}
+  
+        <div class="project">
+          <img src={{project["image"]}} alt="Project Image" class="project-image"/>
+          <div class="project-content">
+            <p class="project-title">{{project["title"]}}</p>
+            <p class="project-description">{{project["description"]}}</p>
+            <a href={{project["github"]}} class="project-github-button" target="_blank">VIEW GITHUB</a>
+          </div>
+        </div> 
+  
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+
+{% endblock %}
