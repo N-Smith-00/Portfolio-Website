@@ -18,5 +18,9 @@ def home():
                  "github": "https://github.com/N-Smith-00/Portfolio-Website"}]
     return render_template('index.html', projects=projects)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 if __name__ == '__main__':
     app.run(debug=True)

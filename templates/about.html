@@ -1,3 +1,28 @@
 {% extends "base.html" %} {% block title %}Nicholas Smith - About{% endblock %} {% 
 block content %}
 
+<div id='about-page'>
+    <section id='about-grid'>
+        <img
+            src='/static/images/portrait_placeholder.png'
+            alt='Profile Picture'
+            class='image'
+        />
+        <div id='about-content'>
+            <h2>About Me</h2>
+            <p style="margin-bottom: 0;">
+                I am a Computer Science student at Toronto Metropolitan University.
+                I have experience with Python, Java, C#, HTML, and CSS. I am currently
+                working on a project that creates baseball lineups based on the stats of
+                avaliable players.
+            </p>
+            <p style="margin-top: 0.5">
+                When I am not programming, I enjoy playing sports, working out, and 
+                being active. I have played baseball, all my life and I currently play 
+                on the Toronto Metropolitan University baseball team.
+            </p>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
